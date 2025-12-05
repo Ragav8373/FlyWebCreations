@@ -1,0 +1,70 @@
+.footer-bg {
+  background: linear-gradient(135deg, #0A1A5E, #1548FF, #1DA1F2);
+  color: white;
+}
+
+.footer-logo {
+  width: 160px;
+}
+
+.footer-about {
+  font-size: 14px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.footer-list li a {
+  color: white;
+  opacity: 0.85;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-list li a:hover {
+  opacity: 1;
+}
+
+.footer-contact {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-contact li {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 8px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.footer-social a {
+  color: white;
+  font-size: 22px;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #000;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+}
