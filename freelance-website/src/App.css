@@ -1,0 +1,27 @@
+body {
+  background: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.card {
+  border-radius: 14px;
+}
+
+.hero-banner {
+  background: url('https://via.placeholder.com/1200x400') no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 6px #000;
+}

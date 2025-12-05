@@ -1,0 +1,27 @@
+/* Admin Dashboard Styles */
+
+.admin-container {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.admin-container h2 {
+  margin-bottom: 30px;
+}
+
+.admin-section {
+  margin-bottom: 40px;
+}
+
+.admin-section h4 {
+  margin-bottom: 15px;
+}
+
+.admin-section input {
+  margin-bottom: 10px;
+}
+
+.btn-add {
+  margin-top: 10px;
+}
