@@ -1,0 +1,174 @@
+.career-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 15px;
+  font-family: Arial, sans-serif;
+}
+
+.join-team {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.join-team h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.join-team h2 span {
+  color: #6a11cb;
+}
+
+.join-team p {
+  font-size: 16px;
+  color: #222;
+}
+
+/* Gradient Border Wrapper */
+.gradient-border {
+  border-radius: 12px;
+  padding: 3px; /* border thickness */
+  background: linear-gradient(270deg, #ff8a00, #e52e71, #ff8a00, #e52e71);
+  background-size: 400% 400%;
+  animation: gradientMove 8s linear infinite;
+}
+
+/* Actual form inside */
+.career-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Rows */
+.form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.career-form .form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* allows items to wrap to next line */
+}
+
+.career-form input,
+.career-form input[type="file"] {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .career-form .form-row {
+    flex-direction: column; /* stack inputs vertically */
+  }
+  
+  .career-form input,
+  .career-form input[type="file"] {
+    width: 100%;
+  }
+}
+
+/* Gradient animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Gradient Button */
+.career-btn {
+  position: relative;
+  padding: 12px 0;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(#fff, #fff); /* inner background */
+  z-index: 1;
+}
+
+.career-btn::before {
+  content: "";
+  position: absolute;
+  top: -3px; left: -3px; right: -3px; bottom: -3px; /* border thickness */
+  border-radius: 33px; /* slightly larger than button */
+  background: linear-gradient(270deg, #ff8a00, #e52e71, #ff8a00, #e52e71);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradientMove 8s linear infinite;
+}
+
+
+.career-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+.join-team {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Arial', sans-serif;
+  padding: 0 15px; /* Small padding for mobile */
+}
+
+/* Gradient heading */
+.join-team h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc, #ff8a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Accent span for company name */
+.join-team h2 span {
+  color: #e52e71; /* Optional override or extra pop */
+  font-weight: bolder;
+}
+
+/* Paragraph styling */
+.join-team p {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .join-team h2 {
+    font-size: 24px; /* smaller font on mobile */
+  }
+
+  .join-team p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .join-team h2 {
+    font-size: 20px;
+  }
+
+  .join-team p {
+    font-size: 13px;
+  }
+}

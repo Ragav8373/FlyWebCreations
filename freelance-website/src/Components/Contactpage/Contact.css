@@ -1,54 +1,86 @@
-/* Outer container */
-.contact-wrapper {
+.contact-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 15px;
+  font-family: Arial, sans-serif;
+}
+
+/* Gradient border wrapper */
+.contact-form-wrapper {
+  position: relative;
+  padding: 3px; /* border thickness */
+  border-radius: 12px;
+  background: linear-gradient(270deg, #ff8a00, #e52e71, #ff8a00, #e52e71);
+  background-size: 400% 400%;
+  animation: gradientMove 8s linear infinite;
+  margin-top: 30px;
+}
+
+/* Form inside wrapper */
+.contact-form-wrapper form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Input fields */
+.contact-input {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-/* Gradient border box */
-.contact-box {
+/* Error message */
+.error-text {
+  color: red;
+  font-size: 13px;
+}
+
+/* Send button with gradient border */
+.send-btn {
+  position: relative;
+  padding: 12px 0;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  background: #fff;
+  color: #222;
+  font-weight: bold;
+  cursor: pointer;
   width: 100%;
-  max-width: 600px;
-  padding: 30px;
-  border-radius: 20px;
-  border: 4px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, #ff1c8a, #5c5cff);
-  background: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  z-index: 1;
 }
 
-/* Title inside the box */
-.contact-title {
-  text-align: center;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 25px;
+.send-btn::before {
+  content: "";
+  position: absolute;
+  top: -3px; left: -3px; right: -3px; bottom: -3px;
+  border-radius: 33px;
+  background: linear-gradient(270deg, #ff8a00, #e52e71, #ff8a00, #e52e71);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradientMove 8s linear infinite;
 }
 
-/* Gradient button */
-.btn-gradient {
-  padding: 10px 20px;
-  border-radius: 50px;
-  border: 3px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(135deg, #ff1c8a, #5c5cff);
-  background: transparent;
-  color: #ff1c8a;
-  font-weight: 600;
-  transition: all 0.3s ease;
+.send-btn:hover {
+  opacity: 0.9;
 }
 
-.btn-gradient:hover {
-  background: linear-gradient(135deg, #ff1c8a, #5c5cff);
-  color: white;
-  border-color: transparent;
-}
-
-/* Responsive */
-@media (max-width: 576px) {
-  .contact-box {
-    padding: 20px;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 30px 15px;
+  }
+  .send-btn {
+    font-size: 15px;
   }
 }

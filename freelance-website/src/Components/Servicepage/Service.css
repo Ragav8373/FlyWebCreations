@@ -1,0 +1,39 @@
+/* Heading Style */
+.services-heading {
+  font-size: 32px;
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Card */
+.service-card {
+  border-radius: 18px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #fff;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Icons */
+.service-icon {
+  font-size: 48px;
+  color: #ff8a00;
+  transition: 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Title */
+.service-card h5 {
+  font-size: 18px;
+  margin-top: 10px;
+}

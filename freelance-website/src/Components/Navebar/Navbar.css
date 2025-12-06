@@ -1,0 +1,91 @@
+/* Make Navbar Sticky */
+.navbar-bg {
+  background: #ffffff;
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 3000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* Logo */
+.logo-size {
+  width: 110px;
+  height: auto;
+}
+
+/* Nav Link */
+.nav-custom {
+  font-size: 20px;
+  color: #1C1559 !important;
+  font-weight: 500;
+  margin-left: 25px;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.nav-custom::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 3px;
+  background-image: linear-gradient(to right,#3C2EBF,#ED1C24);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  border-radius: 3px;
+}
+
+.nav-custom:hover::after {
+  transform: scaleX(1);
+}
+
+/* --------------------------------------------- */
+/* APPLY YOUR HERO-BTN BORDER STYLE TO CONTACT */
+
+/* Parent */
+.contact-btn {
+  position: relative;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  padding: 12px 32px !important;
+  margin-left: 25px;
+
+  border: none;
+  background: transparent !important;
+  color: #1C1559 !important;
+  border-radius: 30px;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+/* Gradient Border */
+.contact-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px; /* border thickness */
+  border-radius: 30px;
+  background: linear-gradient(to right, #ff8a00, #e52e71);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Hover */
+.contact-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .contact-btn {
+    padding: 10px 22px !important;
+    font-size: 16px !important;
+  }
+}

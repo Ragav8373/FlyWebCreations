@@ -1,27 +1,55 @@
 import React from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import {
+  FaCode,
+  FaPaintBrush,
+  FaCogs,
+  FaShoppingCart,
+  FaWordpress,
+  FaBullhorn,
+  FaChartLine,
+  FaPuzzlePiece,
+  FaMobileAlt,
+  FaGem
+} from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import "./Service.css";
 
 export default function Services() {
+  const navigate = useNavigate();
+
   const services = [
-    { title: "Website Development", desc: "Modern responsive websites using React." },
-    { title: "UI/UX Design", desc: "Attractive, user-friendly layouts and components." },
-    { title: "API Setup", desc: "Backend integration and secure API handling." },
-    { title: "E-Commerce", desc: "Online stores with payment gateway integration." },
-    { title: "Hosting Setup", desc: "Domain, hosting, deployment and SSL setup." },
+    { icon: <FaCode />, title: "Web Development" },
+    { icon: <FaPaintBrush />, title: "UI / UX Design" },
+    { icon: <FaCogs />, title: "Custom Web App Development" },
+    { icon: <FaShoppingCart />, title: "E-Commerce Development" },
+    { icon: <FaWordpress />, title: "WordPress Development" },
+    { icon: <FaBullhorn />, title: "Digital Marketing" },
+    { icon: <FaChartLine />, title: "Data & Analytics" },
+    { icon: <FaPuzzlePiece />, title: "API Development" },
+    { icon: <FaMobileAlt />, title: "Mobile App UI Design" },
+    { icon: <FaGem />, title: "Branding & Logo Design" },
   ];
 
   return (
-    <div className="container py-5">
-      <h2 className="fw-bold mb-4 text-center">Our Services</h2>
-      <div className="row">
+    <Container className="py-5">
+      <h2 className="services-heading fw-bold text-center mb-5">
+        Our Services
+      </h2>
+
+      <Row>
         {services.map((s, i) => (
-          <div className="col-md-4 mb-3" key={i}>
-            <div className="card shadow-sm p-3 h-100 rounded-3">
-              <h5>{s.title}</h5>
-              <p className="text-muted">{s.desc}</p>
-            </div>
-          </div>
+          <Col md={4} className="mb-4" key={i}>
+            <Card
+              className="service-card p-4 text-center shadow-sm h-100"
+              onClick={() => navigate("/services")}
+            >
+              <div className="service-icon mb-3">{s.icon}</div>
+              <h5 className="fw-semibold">{s.title}</h5>
+            </Card>
+          </Col>
         ))}
-      </div>
-    </div>
+      </Row>
+    </Container>
   );
 }

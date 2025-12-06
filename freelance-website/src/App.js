@@ -6,6 +6,7 @@ import Footer from "./Components/Footerpage/Footer";
 
 import LandingPage from "./Components/LandingPage/LandingPage"; 
 import About from "./Components/Aboutpage/About";
+import Ourservices from "./Components/OurServices/Ourservices";
 import Services from "./Components/Servicepage/Service";
 import Reviews from "./Components/Reviewpage/Reviews";
 import Contact from "./Components/Contactpage/Contact";
@@ -13,6 +14,7 @@ import Contact from "./Components/Contactpage/Contact";
 import Admin from "./Components/Adminpage/Admin";
 import AdminLogin from "./Components/AdminLogin";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import Career from "./Components/Careerpage/Career";
 
 export default function App() {
   return (
@@ -25,8 +27,8 @@ export default function App() {
 
         {/* Separate pages (optional) */}
         <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/ourservices" element={<Ourservices/>} />
+        <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
 
         {/* Admin */}
