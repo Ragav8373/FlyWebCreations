@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { auth } from "../firebaseConfig";
-import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
 export default function AdminLogin() {
@@ -11,11 +9,27 @@ export default function AdminLogin() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setError("");
+
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate("/admin");
+      const res = await fetch("http://localhost:5000/api/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        // You can store a token here if you implement JWT
+        localStorage.setItem("adminToken", data.token);
+        navigate("/admin");
+      } else {
+        setError(data.message || "Login failed");
+      }
     } catch (err) {
-      setError("Invalid email or password");
+      console.error(err);
+      setError("Server error, try again later");
     }
   };
 

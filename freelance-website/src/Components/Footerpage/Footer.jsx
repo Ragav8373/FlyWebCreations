@@ -29,7 +29,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaFacebook, FaInstagram, FaTelegram, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import "./Footer.css";
-import logo from "../../Assets/Flywebcreations.png";
+import logo from "../../Assets/flyweblogo.png";
 
 export default function Footer() {
   return (
