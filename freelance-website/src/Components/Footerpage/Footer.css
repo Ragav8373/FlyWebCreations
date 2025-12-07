@@ -1,5 +1,12 @@
 .footer-bg {
-  background: linear-gradient(135deg, #1c1559, #3c2ebf, #ed1c24);
+  /* background: linear-gradient(135deg, #1c1559, #3c2ebf, #ed1c24); */
+  background: linear-gradient(90deg,
+  #2e124a 0%,
+  #7a3382 40%,
+  #d68a2e 80%,
+  #f7d46c 100%
+);
+
   color: white;
 }
 

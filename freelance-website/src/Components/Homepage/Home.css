@@ -6,7 +6,12 @@
 }
 
 .slide-background {
-  background: linear-gradient(135deg, #1c1559, #3c2ebf, #ed1c24);
+background-image: url('../../Assets/flyweb2.png');
+/* Add your image path here */
+  background-size: cover;       /* Makes image cover full area */
+  background-position: center;  /* Keeps image centered */
+  background-repeat: no-repeat; /* Prevents repeating */
+  
   height: 90vh;
   width: 100%;
   display: flex;
@@ -16,6 +21,7 @@
   padding: 20px;
   position: relative;
 }
+
 
 /* Text Section */
 .slide-content h1 {

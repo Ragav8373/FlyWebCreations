@@ -8,6 +8,8 @@ export default function Career() {
     currentCTC: '', expectedCTC: '', resume: null
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     if (name === 'resume') {
@@ -17,20 +19,43 @@ export default function Career() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
-    alert('Application submitted successfully!');
-    setFormData({
-      name: '', phone: '', email: '', experience: '', company: '',
-      designation: '', skills: '', erpKnowledge: '', noticePeriod: '',
-      currentCTC: '', expectedCTC: '', resume: null
-    });
+    setLoading(true);
+
+    try {
+      const data = new FormData();
+      for (const key in formData) {
+        if (formData[key]) data.append(key, formData[key]);
+      }
+
+      const response = await fetch('http://localhost:5000/api/career', {
+        method: 'POST',
+        body: data
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert(result.message);
+        setFormData({
+          name: '', phone: '', email: '', experience: '', company: '',
+          designation: '', skills: '', erpKnowledge: '', noticePeriod: '',
+          currentCTC: '', expectedCTC: '', resume: null
+        });
+      } else {
+        alert(result.message || 'Failed to submit application.');
+      }
+    } catch (err) {
+      console.error('Error submitting form:', err);
+      alert('Error submitting application.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="career-container">
-      {/* Team Section */}
       <div className="join-team">
         <h2>Join the <span>FlyWebCreations</span> Team</h2>
         <p>
@@ -39,7 +64,6 @@ export default function Career() {
         </p>
       </div>
 
-      {/* Gradient Border Wrapper */}
       <div className="gradient-border">
         <form className="career-form" onSubmit={handleSubmit}>
           <div className="form-row">
@@ -67,7 +91,9 @@ export default function Career() {
             <input type="file" name="resume" onChange={handleChange} />
           </div>
 
-          <button type="submit" className="career-btn">Submit</button>
+          <button type="submit" className="career-btn" disabled={loading}>
+            {loading ? 'Submitting...' : 'Submit'}
+          </button>
         </form>
       </div>
     </div>

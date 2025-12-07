@@ -13,6 +13,7 @@ export default function Contact() {
   });
 
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false); // optional loading state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,16 +30,43 @@ export default function Contact() {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-    } else {
-      setErrors({});
-      console.log("Form submitted:", formData);
-      alert("Form submitted successfully!");
-      setFormData({ name: "", email: "", company: "", phone: "", service: "", note: "" });
+      return;
+    }
+    setErrors({});
+    setLoading(true);
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(data.message);
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          service: "",
+          note: ""
+        });
+      } else {
+        alert(data.message || "Failed to submit form.");
+      }
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      alert("Error submitting form.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -138,7 +166,9 @@ export default function Contact() {
           </Row>
 
           <div className="button-container">
-            <button type="submit" className="send-btn">Send</button>
+            <button type="submit" className="send-btn" disabled={loading}>
+              {loading ? "Sending..." : "Send"}
+            </button>
           </div>
         </Form>
       </div>
