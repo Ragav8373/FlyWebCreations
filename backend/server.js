@@ -6,8 +6,7 @@ const connectDB = require("./config/db");
 // Routes
 const contactRoutes = require("./routes/contactRoutes");
 const careerRoutes = require("./routes/careerRoutes");
-const adminLoginRoutes = require("./routes/adminRoutes");
-const adminContentRoutes = require("./routes/adminContentRoutes");
+
 
 dotenv.config();
 connectDB();
@@ -20,8 +19,6 @@ app.use("/uploads", express.static("uploads"));
 
 app.use("/api/contact", contactRoutes);
 app.use("/api/career", careerRoutes);
-app.use("/api/admin", adminLoginRoutes);          // login
-app.use("/api/admin/content", adminContentRoutes); // content CRUD
 
 
 const PORT = process.env.PORT || 5000;
