@@ -33,7 +33,7 @@ export default function NewNavbar() {
               About Us
             </Nav.Link>
 
-            <Nav.Link as={Link} to="/services" className="nav-custom">
+            <Nav.Link as={Link} to="/ourservices" className="nav-custom">
               Our Services
             </Nav.Link>
 

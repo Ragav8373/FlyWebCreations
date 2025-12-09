@@ -1,0 +1,89 @@
+.about-wrapper {
+  background: #fff;
+}
+
+/* Section Titles */
+.section-main-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #fd7e14;
+  margin-bottom: 15px;
+}
+
+.section-main-text {
+  max-width: 850px;
+  color: #555;
+  margin: 0 auto 20px;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Cards */
+.info-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid #ececec;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.info-title {
+  margin-top: 12px;
+  font-size: 22px;
+  color: #fd7e14;
+  font-weight: 700;
+}
+
+.info-text {
+  color: #555;
+  font-size: 15px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Icon Style */
+.icon-orange {
+  color: #fd7e14;
+}
+
+.icon-circle {
+  width: 55px;
+  height: 55px;
+  background: rgba(253, 126, 20, 0.15);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px;
+}
+
+/* How We Do It */
+.how-we-do-box {
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #ececec;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.how-list li {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-main-title {
+    font-size: 28px;
+  }
+
+  .info-title {
+    font-size: 20px;
+  }
+
+  .how-list li {
+    font-size: 15px;
+  }
+}
