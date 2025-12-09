@@ -2,7 +2,7 @@
 .navbar-bg {
   background: #ffffff;
   backdrop-filter: blur(6px);
-  position: sticky;
+  position: sticky !important;
   top: 0;
   z-index: 3000;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);

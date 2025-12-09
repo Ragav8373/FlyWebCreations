@@ -12,8 +12,11 @@
   transition: all 0.3s ease;
   cursor: pointer;
   background: #fff;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Card hover effect */
 .service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
@@ -36,4 +39,19 @@
 .service-card h5 {
   font-size: 18px;
   margin-top: 10px;
+}
+
+/* Description */
+.service-description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-description {
+  opacity: 1;
+  max-height: 200px; /* adjust as needed */
 }

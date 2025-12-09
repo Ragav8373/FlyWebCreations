@@ -17,7 +17,7 @@ export default function LandingPage() {
       <div id="services-section"></div>
       <div id="process-section"></div>
     </>
-      <About />
+      {/* <About /> */}
       <Services />
       <Reviews />
       

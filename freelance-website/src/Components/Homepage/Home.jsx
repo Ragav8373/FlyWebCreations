@@ -1,21 +1,4 @@
-// import React from "react";
 
-// export default function Home() {
-//   return (
-//     <div>
-//       <div className="hero-banner text-center">
-//         <h1>We Build Modern Websites</h1>
-//       </div>
-
-//       <div className="container py-5 text-center">
-//         <h2 className="fw-bold mb-3">Welcome to Our Freelance Services</h2>
-//         <p className="lead mb-4">
-//           Professional and responsive websites for businesses, startups, and personal brands.
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import "./Home.css";  
@@ -36,15 +19,17 @@ export default function Home() {
                 to building modern, fast, and highly engaging websites for
                 businesses and individuals.
               </p>
-              <button
+              {/* <button
                 className="hero-btn"
                 onClick={() => {
-                  const section = document.getElementById("about-section");
+                  const section = document.getElementById("\ourservices");
                   if (section) section.scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 Who We Are
-              </button>
+              </button> */}
+              <a className="hero-btn" href="ourservices"> Who We Are </a>
+
             </div>
           </div>
         </Carousel.Item>
@@ -59,7 +44,7 @@ export default function Home() {
                 portfolios and business websites — we provide end-to-end digital
                 solutions tailored to your goals.
               </p>
-              <button
+              {/* <button
                 className="hero-btn"
                 onClick={() => {
                   const section = document.getElementById("services-section");
@@ -67,7 +52,9 @@ export default function Home() {
                 }}
               >
                 What We Do
-              </button>
+              </button> */}
+               <a className="hero-btn" href="ourservices"> What We Do</a>
+
             </div>
           </div>
         </Carousel.Item>
@@ -82,7 +69,7 @@ export default function Home() {
                 create a beautiful UI, develop using modern tech, and deliver
                 fast, secure, mobile-friendly websites every time.
               </p>
-              <button
+              {/* <button
                 className="hero-btn"
                 onClick={() => {
                   const section = document.getElementById("process-section");
@@ -90,7 +77,9 @@ export default function Home() {
                 }}
               >
                 How We Do It
-              </button>
+              </button> */}
+               <a className="hero-btn" href="ourservices"> How We Do It </a>
+
             </div>
           </div>
         </Carousel.Item>

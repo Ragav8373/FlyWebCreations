@@ -52,6 +52,7 @@ background-image: url('../../Assets/flyweb2.png');
   border: none;                /* no real border */
   z-index: 0;
   overflow: visible;
+  text-decoration: none;
 }
 
 /* gradient border using :before */
