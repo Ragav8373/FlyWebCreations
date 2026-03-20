@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.59a4dc03.css",
+    "main.js": "/static/js/main.75bebcf3.js",
+    "static/media/flyweblogo.png": "/static/media/flyweblogo.7bd12af72188b8b90250.png",
+    "static/media/Flywebcreations.png": "/static/media/Flywebcreations.669191536af67ca36f24.png",
+    "static/media/flyweb2.png": "/static/media/flyweb2.a9ae3a4a4ca1d6c4959c.png",
+    "static/media/flyweb01.png": "/static/media/flyweb01.f14f584acc0fe8bfd9f5.png",
+    "static/media/web2.jpg": "/static/media/web2.71c4315d499ea7a64fca.jpg",
+    "static/media/home-services2.jpg": "/static/media/home-services2.24d57697392c68513778.jpg",
+    "static/media/UIUX.webp": "/static/media/UIUX.b5a3516bcdc061fb6249.webp",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.59a4dc03.css.map": "/static/css/main.59a4dc03.css.map",
+    "main.75bebcf3.js.map": "/static/js/main.75bebcf3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59a4dc03.css",
+    "static/js/main.75bebcf3.js"
+  ]
+}
