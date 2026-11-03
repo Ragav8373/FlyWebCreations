@@ -1,9 +1,0 @@
-# env files
-*.env
-
-# dependencies
-node_modules/
-backend/node_modules/
-
-# logs
-npm-debug.log*

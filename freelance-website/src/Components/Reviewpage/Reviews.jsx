@@ -9,22 +9,22 @@ export default function Reviews() {
     { 
       name: "Emma Wilson", 
       feedback: "Clean, modern and amazing designs! The team delivered everything exactly as I envisioned, with attention to detail and prompt support. I would recommend them to anyone looking for professional web solutions.", 
-      img: profileImg 
+      // img: profileImg 
     },
     { 
       name: "John Doe", 
       feedback: "Great service! Highly recommended. The workflow was smooth, and communication was excellent. They really understand client requirements and execute perfectly.", 
-      img: profileImg 
+      // img: profileImg 
     },
     { 
       name: "Sneha Sharma", 
       feedback: "They understood my requirements perfectly. The final product exceeded my expectations. I am thrilled with their creativity and professionalism.", 
-      img: profileImg 
+      // img: profileImg 
     },
     { 
       name: "David Miller", 
       feedback: "Top-notch support and professional work. They were patient, responsive, and delivered a high-quality solution on time.", 
-      img: profileImg 
+      // img: profileImg 
     },
   ];
 
