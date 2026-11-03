@@ -29,7 +29,7 @@ export default function Career() {
         if (formData[key]) data.append(key, formData[key]);
       }
 
-      const response = await fetch('http://localhost:5000/api/career', {
+      const response = await fetch('http://https://flywebcreations-backend.onrender.com/api/career', {
         method: 'POST',
         body: data
       });
