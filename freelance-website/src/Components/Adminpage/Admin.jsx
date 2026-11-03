@@ -33,11 +33,11 @@ export default function Admin() {
       try {
         const [contactsRes, careersRes, landingRes, servicesRes, reviewsRes] =
           await Promise.all([
-            authFetch("http://https://flywebcreations-backend.onrender.com/api/contact"),
-            authFetch("http://https://flywebcreations-backend.onrender.com/api/career"),
-            authFetch("http://https://flywebcreations-backend.onrender.com/api/admin/content/landing"),
-            authFetch("http://https://flywebcreations-backend.onrender.com/api/admin/content/services"),
-            authFetch("http://https://flywebcreations-backend.onrender.com/api/admin/content/reviews")
+            authFetch("https://flywebcreations-backend.onrender.com/api/contact"),
+            authFetch("https://flywebcreations-backend.onrender.com/api/career"),
+            authFetch("https://flywebcreations-backend.onrender.com/api/admin/content/landing"),
+            authFetch("https://flywebcreations-backend.onrender.com/api/admin/content/services"),
+            authFetch("https://flywebcreations-backend.onrender.com/api/admin/content/reviews")
           ]);
 
         setContacts(await contactsRes.json());
@@ -63,7 +63,7 @@ export default function Admin() {
 
   // Update Landing
   const updateLandingContent = async () => {
-    await authFetch("http://https://flywebcreations-backend.onrender.com/api/admin/content/landing", {
+    await authFetch("https://flywebcreations-backend.onrender.com/api/admin/content/landing", {
       method: "PUT",
       body: JSON.stringify(landing)
     });
@@ -75,7 +75,7 @@ export default function Admin() {
     const s = services[i];
 
     await authFetch(
-      `http://https://flywebcreations-backend.onrender.com/api/admin/content/services/${s._id}`,
+      `https://flywebcreations-backend.onrender.com/api/admin/content/services/${s._id}`,
       {
         method: "PUT",
         body: JSON.stringify(s)
@@ -86,7 +86,7 @@ export default function Admin() {
 
   const deleteService = async (id) => {
     await authFetch(
-      `http://https://flywebcreations-backend.onrender.com/api/admin/content/services/${id}`,
+      `https://flywebcreations-backend.onrender.com/api/admin/content/services/${id}`,
       { method: "DELETE" }
     );
     setServices(services.filter((s) => s._id !== id));
@@ -97,7 +97,7 @@ export default function Admin() {
     const r = reviews[i];
 
     await authFetch(
-      `http://https://flywebcreations-backend.onrender.com/api/admin/content/reviews/${r._id}`,
+      `https://flywebcreations-backend.onrender.com/api/admin/content/reviews/${r._id}`,
       {
         method: "PUT",
         body: JSON.stringify(r)
@@ -109,7 +109,7 @@ export default function Admin() {
 
   const deleteReview = async (id) => {
     await authFetch(
-      `http://https://flywebcreations-backend.onrender.com/api/admin/content/reviews/${id}`,
+      `https://flywebcreations-backend.onrender.com/api/admin/content/reviews/${id}`,
       { method: "DELETE" }
     );
     setReviews(reviews.filter((r) => r._id !== id));
@@ -151,7 +151,7 @@ export default function Admin() {
             Resume:{" "}
             {c.resume ? (
               <a
-                href={`http://https://flywebcreations-backend.onrender.com/uploads/${c.resume}`}
+                href={`https://flywebcreations-backend.onrender.com/uploads/${c.resume}`}
                 target="_blank"
                 rel="noreferrer"
               >

@@ -41,7 +41,7 @@ export default function Contact() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://https://flywebcreations-backend.onrender.com/api/contact", {
+      const response = await fetch("https://flywebcreations-backend.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
