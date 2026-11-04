@@ -6,27 +6,25 @@ import "./Reviews.css";
 
 export default function Reviews() {
   const reviews = [
-    { 
-      name: "Emma Wilson", 
-      feedback: "Clean, modern and amazing designs! The team delivered everything exactly as I envisioned, with attention to detail and prompt support. I would recommend them to anyone looking for professional web solutions.", 
-      // img: profileImg 
-    },
-    { 
-      name: "John Doe", 
-      feedback: "Great service! Highly recommended. The workflow was smooth, and communication was excellent. They really understand client requirements and execute perfectly.", 
-      // img: profileImg 
-    },
-    { 
-      name: "Sneha Sharma", 
-      feedback: "They understood my requirements perfectly. The final product exceeded my expectations. I am thrilled with their creativity and professionalism.", 
-      // img: profileImg 
-    },
-    { 
-      name: "David Miller", 
-      feedback: "Top-notch support and professional work. They were patient, responsive, and delivered a high-quality solution on time.", 
-      // img: profileImg 
-    },
-  ];
+  {
+    name: "Naresh Priyan",
+    project: "Cake Shop Website",
+    feedback:
+      "The website looks attractive and professional. It makes showcasing our cakes and products much easier. Great work and support from the team!",
+  },
+  {
+    name: "Parthiban",
+    project: "Fitness Mobile App",
+    feedback:
+      "The fitness app is easy to use and has a clean design. The team understood my requirements and delivered a good solution.",
+  },
+  {
+    name: "Savarana Kumar",
+    project: "Odoo CRM Application",
+    feedback:
+      "The CRM application helped us organize our business activities more efficiently. The development process was smooth and professional.",
+  },
+];
 
   const settings = {
     infinite: true,
@@ -46,7 +44,7 @@ export default function Reviews() {
         {reviews.map((r, i) => (
           <div key={i}>
             <Card className="review-card text-center p-4">
-              <img src={r.img} alt={r.name} className="review-avatar" />
+              {/* <img src={r.img} alt={r.name} className="review-avatar" /> */}
               <h5 className="mt-3 fw-bold">{r.name}</h5>
               <p className="mt-3 text-muted review-text">{r.feedback}</p>
             </Card>

@@ -83,9 +83,14 @@ background-image: url('../../Assets/flyweb2.png');
   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 }
 
-
-/* Responsive */
+/* Tablet */
 @media (max-width: 768px) {
+  .hero-slider-container,
+  .slide-background {
+    height: 65vh;
+    min-height: 400px;
+  }
+
   .slide-content h1 {
     font-size: 28px;
   }
@@ -97,5 +102,28 @@ background-image: url('../../Assets/flyweb2.png');
   .hero-btn {
     font-size: 16px;
     padding: 10px 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero-slider-container,
+  .slide-background {
+    height: 50vh;
+    min-height: 320px;
+  }
+
+  .slide-content h1 {
+    font-size: 24px;
+  }
+
+  .slide-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .hero-btn {
+    font-size: 14px;
+    padding: 9px 18px;
   }
 }
