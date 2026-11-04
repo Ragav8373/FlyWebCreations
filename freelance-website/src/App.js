@@ -15,6 +15,7 @@ import Admin from "./Components/Adminpage/Admin";
 import AdminLogin from "./Components/AdminLogin";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import Career from "./Components/Careerpage/Career";
+import "./App.css";
 
 export default function App() {
   return (

@@ -30,6 +30,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { FaFacebook, FaInstagram, FaTelegram, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import "./Footer.css";
 import logo from "../../Assets/flyweblogo.png";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -67,10 +68,10 @@ export default function Footer() {
           <Col md={2} sm={6} xs={6}>
             <h5 className="footer-title">Quick Access</h5>
             <ul className="footer-list">
-              <li><a href="/">Home</a></li>
-              <li><a href="/services">Services</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li><a href="/aboutus">About</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/aboutus">About</Link></li>
             </ul>
           </Col>
 

@@ -1,3 +1,12 @@
+
+/* Global box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Hero Container */
 .hero-slider-container {
   width: 100%;
   height: 90vh;
@@ -5,25 +14,39 @@
   position: relative;
 }
 
+/* Bootstrap Carousel */
+.hero-slider-container .carousel,
+.hero-slider-container .carousel-inner,
+.hero-slider-container .carousel-item {
+  height: 100%;
+}
+
+.hero-slider-container .carousel-item {
+  overflow: hidden;
+}
+
+/* Background */
 .slide-background {
-background-image: url('../../Assets/flyweb2.png');
-/* Add your image path here */
-  background-size: cover;       /* Makes image cover full area */
-  background-position: center;  /* Keeps image centered */
-  background-repeat: no-repeat; /* Prevents repeating */
-  
-  height: 90vh;
+  background-image: url('../../Assets/flyweb2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 20px;
-  position: relative;
 }
 
+/* Content */
+.slide-content {
+  width: 100%;
+  max-width: 900px;
+}
 
-/* Text Section */
 .slide-content h1 {
   font-size: 42px;
   font-weight: 700;
@@ -42,42 +65,35 @@ background-image: url('../../Assets/flyweb2.png');
 /* Button */
 .hero-btn {
   position: relative;
+  display: inline-block;
   padding: 12px 28px;
   border-radius: 30px;
   font-size: 18px;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: 0.3s ease;
   color: white;
-  background: transparent;     /* inner area transparent */
-  border: none;                /* no real border */
-  z-index: 0;
-  overflow: visible;
+  background: transparent;
+  border: none;
   text-decoration: none;
+  z-index: 0;
 }
 
-/* gradient border using :before */
 .hero-btn::before {
   content: "";
   position: absolute;
-  inset: 0;                    /* covers the button box */
-  padding: 3px;                /* border thickness */
+  inset: 0;
+  padding: 3px;
   border-radius: 30px;
-  background: linear-gradient( to right, #ff8a00, #e52e71 );
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  background: linear-gradient(to right, #ff8a00, #e52e71);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
   z-index: -1;
-  box-sizing: border-box;
 }
 
-.hero-btn .inner {
-  background: transparent;
-}
-
-/* Hover */
 .hero-btn:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
@@ -85,10 +101,8 @@ background-image: url('../../Assets/flyweb2.png');
 
 /* Tablet */
 @media (max-width: 768px) {
-  .hero-slider-container,
-  .slide-background {
-    height: 65vh;
-    min-height: 400px;
+  .hero-slider-container {
+    height: 60vh;
   }
 
   .slide-content h1 {
@@ -107,19 +121,23 @@ background-image: url('../../Assets/flyweb2.png');
 
 /* Mobile */
 @media (max-width: 480px) {
-  .hero-slider-container,
+  .hero-slider-container {
+    height: 45vh;
+  }
+
   .slide-background {
-    height: 50vh;
-    min-height: 320px;
+    padding: 15px;
   }
 
   .slide-content h1 {
-    font-size: 24px;
+    font-size: 23px;
+    margin-bottom: 12px;
   }
 
   .slide-content p {
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.4;
+    margin-bottom: 20px;
   }
 
   .hero-btn {

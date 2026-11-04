@@ -75,3 +75,45 @@
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   font-size: 14px;
 }
+/* Footer Responsive */
+@media (max-width: 768px) {
+  .footer-logo {
+    width: 130px;
+  }
+
+  .footer-title {
+    font-size: 17px;
+  }
+
+  .footer-about,
+  .footer-list li,
+  .footer-contact li {
+    font-size: 14px;
+  }
+
+  .footer-contact li {
+    flex-wrap: wrap;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-bg {
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
+
+  .footer-logo {
+    width: 120px;
+  }
+
+  .footer-social a {
+    font-size: 20px;
+    margin-right: 12px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    text-align: center;
+  }
+}
