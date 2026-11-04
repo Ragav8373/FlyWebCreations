@@ -78,14 +78,14 @@ export default function Footer() {
           <Col md={4} sm={12}>
             <h5 className="footer-title">Contact</h5>
             <ul className="footer-contact">
-              <li><FaPhoneAlt /> +91 98765 43210</li>
-              <li><FaEnvelope /> support@flywebcreations.com</li>
-              <li><FaMapMarkerAlt /> Coimbatore, Tamil Nadu</li>
+              <li><FaPhoneAlt /> +91 6380962804</li>
+              <li><FaEnvelope /> flywebcreations@gmail.com</li>
+              <li><FaMapMarkerAlt /> Sathyamangalam, Tamil Nadu</li>
             </ul>
 
             {/* Social Icons */}
             <div className="footer-social mt-3">
-              <a href="#"><FaInstagram /></a>
+              <a href="https://www.instagram.com/flywebcreations?exln=ZjAyeWJteTBzY2lm&utm_source=qr"><FaInstagram /></a>
               <a href="#"><FaFacebook /></a>
               <a href="#"><FaTelegram /></a>
             </div>
