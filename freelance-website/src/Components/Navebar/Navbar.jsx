@@ -58,7 +58,7 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "../../Assets/Flywebcreations.png";
+import logo from "../../Assets/flywebcreationslogo.jpeg";
 import "./Navbar.css";
 
 export default function NewNavbar() {
