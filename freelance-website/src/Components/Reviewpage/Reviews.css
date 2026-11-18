@@ -1,4 +1,4 @@
-.review-slider {
+/* .review-slider {
   max-width: 700px;
   margin: auto;
 }
@@ -21,7 +21,7 @@
   object-fit: cover;
   border: 4px solid white;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  margin: 0 auto 20px auto; /* fully inside the card */
+  margin: 0 auto 20px auto; 
   display: block;
 }
 
@@ -32,4 +32,364 @@
   color: #555;
 }
 
+ */
 
+/* ================= MAIN SECTION ================= */
+
+.reviews-section {
+  padding: 85px 0;
+  background: #f8faff;
+  overflow: hidden;
+}
+
+.section-heading {
+  max-width: 750px;
+  margin: 0 auto 55px;
+  
+}
+
+.section-subtitle {
+  display: inline-block;
+  /* color: #0d6efd; */
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section-main-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #172B4D;
+
+}
+
+.section-description {
+  font-size: 15px;
+  color: #778196;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* ================= CREDENTIALS ================= */
+
+.credentials-wrapper {
+  margin-bottom: 85px;
+}
+
+.credentials-heading {
+  margin-bottom: 35px;
+}
+
+.credentials-heading h3 {
+  color: #172033;
+  font-size: 27px;
+  font-weight: 750;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.credentials-heading p {
+  color: #778196;
+  font-size: 14px;
+}
+
+.achievement-card {
+  height: 100%;
+  min-height: 205px;
+  padding: 30px 20px;
+  border: 1px solid #e9edf5;
+  border-radius: 18px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(20, 40, 80, 0.04);
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-7px);
+  border-color: #ff8a00;
+  box-shadow: 0 14px 30px rgba(13, 110, 253, 0.10);
+}
+
+.achievement-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 15px;
+  background: #eaf2ff;
+  color: #ff8a00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.achievement-icon i {
+  font-size: 25px;
+}
+
+.achievement-card h2 {
+  font-size: 35px;
+  font-weight: 800;
+  color: #ff8a00;
+  margin-bottom: 8px;
+}
+
+.achievement-card h5 {
+  color: #26344b;
+  font-size: 16px;
+  font-weight: 650;
+  margin-bottom: 0;
+}
+
+/* Featured Card */
+
+.featured-card {
+  background: #ff8a00;
+  border-color: #ff8a00;
+}
+
+.featured-card .achievement-icon {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.featured-card h2,
+.featured-card h5 {
+  color: #ffffff;
+}
+
+.featured-card:hover {
+  background: #0959cc;
+  border-color: #0959cc;
+}
+
+.featured-card:hover h2,
+.featured-card:hover h5 {
+  color: #ffffff;
+}
+
+/* ================= CLIENT REVIEWS ================= */
+
+.client-reviews-wrapper {
+  padding-top: 15px;
+}
+
+.reviews-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.review-slider {
+  width: 100%;
+  margin: auto;
+}
+
+.review-card {
+  position: relative;
+  min-height: 310px;
+  padding: 35px 40px;
+  border: 1px solid #e9edf5;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(20, 40, 80, 0.05);
+}
+
+.review-quote {
+  color: #ff8a00;
+  font-size: 65px;
+  font-weight: 800;
+  line-height: 0.8;
+}
+
+.review-stars {
+  color: #f5ad25;
+  font-size: 19px;
+  letter-spacing: 4px;
+  margin: 18px 0;
+}
+
+.review-text {
+  min-height: 95px;
+  color: #657187;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+}
+
+.review-client {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid #edf0f5;
+}
+
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  background: #eaf2ff;
+  color: #ff8a00;
+  font-size: 21px;
+  font-weight: 750;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-client-info h5 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #172033;
+  margin-bottom: 5px;
+}
+
+.review-client-info span {
+  font-size: 13px;
+  color: #8490a3;
+}
+
+/* ================= SLIDER CONTROLS ================= */
+
+.review-slider .slick-dots {
+  bottom: -40px;
+}
+
+.review-slider .slick-dots li button:before {
+  color: #ff8a00;
+  font-size: 10px;
+}
+
+.review-slider .slick-prev,
+.review-slider .slick-next {
+  z-index: 2;
+}
+
+.review-slider .slick-prev {
+  left: -30px;
+}
+
+.review-slider .slick-next {
+  right: -30px;
+}
+
+.review-slider .slick-prev:before,
+.review-slider .slick-next:before {
+  color: #ff8a00;
+  font-size: 25px;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 991px) {
+  .reviews-section {
+    padding: 65px 0;
+  }
+
+  .section-main-title {
+    font-size: 30px;
+  }
+
+  .achievement-card {
+    min-height: 190px;
+  }
+
+  .credentials-wrapper {
+    margin-bottom: 70px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 576px) {
+  .reviews-section {
+    padding: 50px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 40px;
+  }
+
+  .section-subtitle {
+    font-size: 11px;
+    letter-spacing: 1.4px;
+  }
+
+  .section-main-title {
+    font-size: 25px;
+    line-height: 1.4;
+  }
+
+  .section-description {
+    font-size: 13px;
+  }
+
+  .credentials-heading h3 {
+    font-size: 23px;
+  }
+
+  .achievement-card {
+    min-height: 175px;
+    padding: 22px 15px;
+  }
+
+  .achievement-card h2 {
+    font-size: 30px;
+  }
+
+  .achievement-card h5 {
+    font-size: 15px;
+  }
+
+  .achievement-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+  }
+
+  .achievement-icon i {
+    font-size: 22px;
+  }
+
+  .credentials-wrapper {
+    margin-bottom: 65px;
+  }
+
+  .reviews-container {
+    padding: 0 12px;
+  }
+
+  .review-card {
+    min-height: 330px;
+    padding: 28px 22px;
+  }
+
+  .review-text {
+    font-size: 14px;
+    line-height: 1.8;
+    min-height: 110px;
+  }
+
+  .review-slider .slick-prev {
+    left: -13px;
+  }
+
+  .review-slider .slick-next {
+    right: -13px;
+  }
+
+  .review-slider .slick-dots {
+    bottom: -35px;
+  }
+}

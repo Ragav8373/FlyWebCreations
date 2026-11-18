@@ -172,3 +172,62 @@
     font-size: 13px;
   }
 }
+
+.career-field {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.career-field input,
+.career-field select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  background-color: #fff;
+}
+
+.career-field input:focus,
+.career-field select:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 4px rgba(106, 17, 203, 0.2);
+}
+
+.career-error {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.career-hint {
+  color: #777;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.career-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.career-email {
+  margin-top: 15px !important;
+  font-size: 15px !important;
+  font-weight: 500;
+}
+
+.career-email a {
+  color: #6a11cb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.career-email a:hover {
+  color: #e52e71;
+  text-decoration: underline;
+}
